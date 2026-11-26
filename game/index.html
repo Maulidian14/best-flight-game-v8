@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Skyhook Courier — the best flight game</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M16 4 L28 24 L16 20 L4 24 Z' fill='%23ffd23f'/%3E%3C/svg%3E">
+<style>
+  html, body {
+    margin: 0;
+    padding: 0;
+    background: #0a1424;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  }
+  #wrap {
+    width: min(100vw, calc(100vh * 1.6));
+    max-width: 1280px;
+  }
+  canvas {
+    display: block;
+    width: 100%;
+    height: auto;
+    background: #2f6fd0;
+    cursor: crosshair;
+  }
+  #hint {
+    color: #9db8cc;
+    font-size: 13px;
+    text-align: center;
+    padding: 8px 0 0;
+  }
+  #hint b { color: #eaf6ff; }
+</style>
+</head>
+<body>
+<div id="wrap">
+  <canvas id="game" width="1280" height="800"></canvas>
+  <div id="hint"><b>Skyhook Courier</b> — arrows fly, W/S throttle, SPACE brake, P pause, M sound. Click a mission card or press 1, 2, 3 to fly.</div>
+</div>
+<noscript><p style="color:#fff;text-align:center">Skyhook Courier needs JavaScript to fly.</p></noscript>
+<script type="module" src="./src/main.js"></script>
+</body>
+</html>
